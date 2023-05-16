@@ -1,11 +1,20 @@
-user_message = "Enter a todo: "
-
 todos = []
 
 
-#while loop 1
 while True:
-    todo = input(user_message)
-    #stores todos in a list
-    todos.append(todo) #append is a method, which are attached to data types
-    print(todos)
+    user_action = input("Type add, show or exit: ")
+    user_action = user_action.strip()
+    match user_action:
+        case 'add':
+            todo = input("Enter a todo: ")
+            todos.append(todo)
+        case 'show' | 'display':
+            for item in todos:
+                item = item.title()
+                print(item)
+        case 'exit':
+            break
+        # case _:
+        #     print("You entered an unknown command.")
+print("bye")
+
