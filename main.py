@@ -7,12 +7,18 @@ while True:
 
             file = open('todos.txt', 'r')
             todos = file.readlines()
+            file.close()
 
             todos.append(todo)                             #todos is updated at this point
 
             file = open('todos.txt', 'w')
             file.writelines(todos)
+            file.close()
         case 'show' | 'display':
+            file = open('todos.txt','r')
+            todos = file.readlines()
+            file.close()
+
             for index, item in enumerate(todos):
                 item = item.title()
                 row = f"{index + 1}-{item}"
