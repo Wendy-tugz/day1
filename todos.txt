@@ -1,4 +1,9 @@
 prepare
-shower
-shower
+fix seat well
+cook
+fly
+run
 play
+call
+go
+ruunning
