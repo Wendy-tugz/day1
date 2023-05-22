@@ -6,17 +6,19 @@ while True:
     if 'add' in user_action:
         todo = user_action[4:]
 
+        todos = todo + "\n"
+
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
-        todos.append(todo)        # todos is updated at this point
+        todos.append(todo)         # todos is updated at this point
 
         with open('todos.txt', 'w') as file:
             file.writelines(todos)
 
     elif 'show' in user_action:
 
-        with open('todos.txt','r') as file:
+        with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
         # new_todos = [item.strip('\n') for item in todos]     #list comprehension
@@ -27,10 +29,11 @@ while True:
             row = f"{index + 1}-{item}"
             print(row)
     elif 'edit' in user_action:
-        number = user_action[5:]
+        number = int(user_action[5:])
+        print(number)
         number = number - 1
 
-        with open('todos.txt','r') as file:
+        with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
         new_todo = input("Enter new to do: ")
@@ -39,10 +42,10 @@ while True:
         with open('todos.txt', 'w') as file:
             file.writelines(todos)
 
-    if 'complete' in user_action:
-        number = int(input("Number of the todo to complete: "))
+    elif 'complete' in user_action:
+        number = int(user_action[9:])
 
-        with open('todos.txt','r') as file:
+        with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
         index = number - 1
@@ -50,7 +53,7 @@ while True:
         todos.pop(number - 1)
 
         with open('todos.txt', 'w') as file:
-             file.writelines(todos)
+            file.writelines(todos)
 
         message = f"Todo {todo_to_remove} was removed from the list"
         print(message)
