@@ -13,9 +13,24 @@
 # print(average)
 
 
-def get_average():
-    print("Hi")
-    x = "hello"
+# def get_average():
+#     print("Hi")
+#     x = "hello"
+#
+#
+# print(get_average())
 
 
-print(get_average())
+def get_maxvalue():
+    grades = [9.6, 9.2, 9.7]
+
+    maxvalue = max(grades)
+    minvalue = min(grades)
+    message = f"Max: {maxvalue}, Min: {minvalue}"
+    return message
+
+
+print(get_maxvalue())
+
+
+
