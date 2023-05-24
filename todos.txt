@@ -1,5 +1,5 @@
-prepare
-fix seat well
+add a new player
+update the OS
 cook for mum
 run
 play
@@ -7,4 +7,4 @@ call
 go
 ruunning
 netflix
-laugh love
+shoe cleaning
