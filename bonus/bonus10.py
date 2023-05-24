@@ -20,14 +20,23 @@
 # except ValueError:
 #     print("You need to enter a number. Run the program again.")
 
-try:
-    total_value = float(input("Enter total value: "))
-    value = float(input("Enter value: "))
+# try:
+#     total_value = float(input("Enter total value: "))
+#     value = float(input("Enter value: "))
+#
+#     percentage = (value / total_value) * 100
+#     print(f"That is {percentage}%")
+# except ValueError:
+#     print("You need to enter a number. Run the program again.")
+# except ZeroDivisionError:
+#     print("Your total value can not be zero.")
 
-    percentage = (value / total_value) * 100
-    print(f"That is {percentage}%")
+try:
+    waiting_list = ["john", "marry"]
+    name = input("Enter name: ")
+
+    number = waiting_list.index(name)
+    print(f"{name}'s turn is {number}")
 except ValueError:
-    print("You need to enter a number. Run the program again.")
-except ZeroDivisionError:
-    print("Your total value can not be zero.")
+    print(f"{name} is not on the list.")
 
