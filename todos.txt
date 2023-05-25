@@ -5,3 +5,5 @@ clean shoes
 eat burger
 new shoes
 news letters
+polish shoes
+clean the code
