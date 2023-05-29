@@ -17,6 +17,14 @@
 #     print("Kid can use the slide.")
 
 
-def liters_to_m3(liters):
-    m3 = liters / 1000
-    return m3
+# def liters_to_m3(liters):
+#     m3 = liters / 1000
+#     return m3
+
+
+def get_area(x=10):
+    return x * 2
+
+
+area = get_area(x=1)
+print(area)
